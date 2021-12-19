@@ -8,23 +8,29 @@ html {
 }
 
 body {
-    background: #1F1737;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
     margin: 0;
+    background: radial-gradient(circle, #476a75 70%, transparent 71%) 50% 50% / 270px 270px no-repeat,
+                radial-gradient(circle, #3e5767 70%, transparent 71%) 50% 50% / 340px 340px no-repeat,
+                radial-gradient(circle, #313c53 70%, transparent 71%) 50% 50% / 420px 420px no-repeat,
+    #1F1737;
+    animation: pulsing-background 6s infinite;
 }
 
 .capsule {
     width: 258px;
     height: 225px;
+    position: relative;
     display: flex;
     flex-direction: column;
     background: radial-gradient(ellipse at top, #76B8B6 55%, #315A5B 56%, #315A5B 58%, #FFFFFF 59%, #FFFFFF 67%, #315A5B 68%, #315A5B 70%, transparent 71%, transparent 100%) 50% 78% / 214px 81px no-repeat,
                 radial-gradient(ellipse at bottom, #315A5B 62%, #7DB9B7 63%, #7DB9B7 67%, #315A5B 68%, #315A5B 70%, transparent 71%, transparent 100%) 50% 0 / 207px 115px no-repeat,
                 radial-gradient(ellipse at top, #CCE3E6 67%, #315A5B 68%, #315A5B 70%, transparent 71%, transparent 100%) 50% 100% / 205px 96px no-repeat;
+    animation: yoda-animation 4s infinite;
 }
 
 .baby-yoda {
@@ -323,4 +329,30 @@ body {
     background: radial-gradient(ellipse at top, transparent 55%, #315A5B 56%, #315A5B 58%, #FFFFFF 59%, #FFFFFF 67%, #315A5B 68%, #315A5B 70%, transparent 71%, transparent 100%) 50% 73% / 214px 81px no-repeat;
 }
 
+@keyframes pulsing-background {
+    0% {
+        background-size: 270px 270px, 340px 340px, 420px 420px;
+    }
 
+    50% {
+        background-size: 295px 295px, 390px 390px, 495px 495px;
+    }
+
+    100% {
+        background-size: 270px 270px, 340px 340px, 420px 420px;
+    }
+}
+
+@keyframes yoda-animation {
+    0% {
+        top: 20px;
+    }
+
+    50% {
+        top: -20px;
+    }
+
+    100% {
+        top: 20px;
+    }
+}
