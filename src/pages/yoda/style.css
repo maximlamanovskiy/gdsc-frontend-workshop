@@ -1,0 +1,326 @@
+/*
+пт 3.5 часа
+сб 3.5 часа
+*/
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #1F1737;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.capsule {
+    width: 258px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(ellipse at top, #76B8B6 55%, #315A5B 56%, #315A5B 58%, #FFFFFF 59%, #FFFFFF 67%, #315A5B 68%, #315A5B 70%, transparent 71%, transparent 100%) 50% 78% / 214px 81px no-repeat,
+                radial-gradient(ellipse at bottom, #315A5B 62%, #7DB9B7 63%, #7DB9B7 67%, #315A5B 68%, #315A5B 70%, transparent 71%, transparent 100%) 50% 0 / 207px 115px no-repeat,
+                radial-gradient(ellipse at top, #CCE3E6 67%, #315A5B 68%, #315A5B 70%, transparent 71%, transparent 100%) 50% 100% / 205px 96px no-repeat;
+}
+
+.baby-yoda {
+    margin-top: 10%;
+}
+
+.baby-yoda__head {
+    height: 100px;
+    width: 260px;
+    position: relative;
+    background: radial-gradient(ellipse, #7BE1A0 56%, #123126 57%, #123126 60%, transparent 61%) 50% 20px / 115px 100px no-repeat;
+}
+
+.baby-yoda__head::after {
+    content: '';
+    display: block;
+    width: 140px;
+    height: 73px;
+    position: absolute;
+    top: 64px;
+    left: 58px;
+    z-index: 1;
+    background: radial-gradient(ellipse, #F4AAC6 48%, transparent 52%) 51% 52% / 21px 10px no-repeat,
+                radial-gradient(ellipse at top, #33313D 43%, #232F31 44%, #232F31 48%, transparent 49%) 51% 57% / 33px 16px no-repeat,
+                radial-gradient(ellipse at top, #7BE1A0 50%, #123126 51%, #123126 54%, transparent 55%) 0 100% / 100% 50px no-repeat;
+}
+
+.head__face {
+    position: relative;
+}
+
+.head__ear_left {
+    width: 77px;
+    height: 18px;
+    position: absolute;
+    top: 72px;
+    left: -2px;
+    z-index: 2;
+    background: #7BE1A0;
+    border: 3px solid #123126;
+    transform: rotate(12.07deg);
+    border-radius: 100%;
+}
+
+.head__ear_left::before {
+    content: '';
+    display: block;
+    width: 83px;
+    height: 49px;
+    position: absolute;
+    top: -42px;
+    left: -1px;
+    background: linear-gradient(154deg, #7BE1A0 46%, #123126 47%, #123126 49%, transparent 50%);
+    transform: rotate(178deg);
+}
+
+.head__ear_left::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 19px;
+    position: absolute;
+    top: -7px;
+    left: 74px;
+    background: #7BE1A0;
+}
+
+.ear__inside-part_left {
+    width: 61px;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    left: 12px;
+    z-index: 4;
+    border-radius: 100%;
+    background: #62CD85;
+    transform: rotate(-2deg);
+}
+
+.ear__inside-part_left::before {
+    content: '';
+    display: block;
+    width: 55px;
+    height: 23px;
+    position: absolute;
+    top: -18px;
+    left: 1px;
+    background: linear-gradient(to bottom right, transparent 49%, #62CD85 50%);
+}
+
+.head__ear_right {
+    width: 77px;
+    height: 18px;
+    position: absolute;
+    top: 72px;
+    left: 178px;
+    z-index: 2;
+    background: #7BE1A0;
+    border: 3px solid #123126;
+    transform: rotate(-12.07deg);
+    border-radius: 100%;
+}
+
+.head__ear_right::before {
+    content: '';
+    display: block;
+    width: 83px;
+    height: 49px;
+    position: absolute;
+    top: -42px;
+    left: -5px;
+    background: linear-gradient(-154deg, #7BE1A0 46%, #123126 47%, #123126 49%, transparent 50%);
+    transform: rotate(-178deg);
+}
+
+.head__ear_right::after {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 14px;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    background: #7BE1A0;
+}
+
+.ear__inside-part_right {
+    width: 61px;
+    height: 13px;
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    z-index: 4;
+    border-radius: 100%;
+    background: #62CD85;
+    transform: rotate(2deg);
+}
+
+.ear__inside-part_right::before {
+    content: '';
+    display: block;
+    width: 55px;
+    height: 23px;
+    position: absolute;
+    top: -18px;
+    left: 6px;
+    background: linear-gradient(to bottom left, transparent 49%, #62CD85 50%);
+}
+
+.face__forehead {
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    top: 33px;
+    left: 123px;
+    border-bottom: 2px solid #62CD85;
+    border-radius: 100%;
+}
+
+.face__forehead::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    left: -7px;
+    border-bottom: 2px solid #62CD85;
+    border-radius: 100%;
+}
+
+.face__eye_left {
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    top: 68px;
+    left: 90px;
+    z-index: 3;
+    border-radius: 100%;
+    transform: rotate(7.15deg);
+    background: #1F1737;
+}
+
+.face__eye_left::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 8px;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    background: #FFFFFF;
+    transform: rotate(44.02deg);
+    border-radius: 100%;
+}
+
+.face__eye_left::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    top: 12px;
+    left: 3px;
+    background: #D3D3D3;
+    border-radius: 100%;
+}
+
+.face__eyebrow_left {
+    width: 35px;
+    height: 25px;
+    position: absolute;
+    top: -10px;
+    left: -1px;
+    border-top: 3px solid #62CD85;
+    border-radius: 100%;
+    transform: rotate(12deg);
+}
+
+.face__eye_right {
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    top: 68px;
+    left: 141px;
+    z-index: 3;
+    border-radius: 100%;
+    transform: rotate(-7.15deg);
+    background: #1F1737;
+}
+
+.face__eye_right::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 8px;
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    background: #FFFFFF;
+    transform: rotate(58.32deg);
+    border-radius: 100%;
+}
+
+.face__eye_right::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    top: 11px;
+    left: 3px;
+    background: #D3D3D3;
+    border-radius: 100%;
+}
+
+.face__eyebrow_right {
+    width: 35px;
+    height: 25px;
+    position: absolute;
+    top: -10px;
+    left: -1px;
+    border-top: 3px solid #62CD85;
+    border-radius: 100%;
+    transform: rotate(-12deg);
+}
+
+.face__nose {
+    width: 16px;
+    height: 9px;
+    position: absolute;
+    top: 81px;
+    left: 122px;
+    z-index: 3;
+    background: radial-gradient(ellipse at bottom, #68D28B 40%, transparent 41%) 50% 0 / 100% 100% no-repeat;
+}
+
+.body__clothe {
+    width: 100px;
+    height: 52px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #938B7B 38%, #123126 39%, #123126 41%, #5C574D 42%, #5C574D 100%);
+    border: 4px solid #123126;
+    border-radius: 15px;
+    position: relative;
+}
+
+.body__clothe::after {
+    content: '';
+    display: block;
+    width: 258px;
+    height: 225px;
+    position: absolute;
+    top: -122px;
+    left: -79px;
+    background: radial-gradient(ellipse at top, transparent 55%, #315A5B 56%, #315A5B 58%, #FFFFFF 59%, #FFFFFF 67%, #315A5B 68%, #315A5B 70%, transparent 71%, transparent 100%) 50% 73% / 214px 81px no-repeat;
+}
+
+
